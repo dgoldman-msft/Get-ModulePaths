@@ -26,14 +26,15 @@ Import-Module "$PSScriptRoot\..\Get-ModulePaths.psm1" -Force
 # Need to import explicitly so we can use the configuration class
 Import-Module Pester
 
-
+Write-PSFMessage -Level Important -Message "Creating test result folder"
+$null = New-Item -Path "$PSScriptRoot\..\.." -Name TestResults -ItemType Directory -Force
 
 $totalFailed = 0
 $totalRun = 0
 
 $testresults = @()
 $config = [PesterConfiguration]::Default
-
+$config.TestResult.Enabled = $true
 
 #region Run General Tests
 if ($TestGeneral)

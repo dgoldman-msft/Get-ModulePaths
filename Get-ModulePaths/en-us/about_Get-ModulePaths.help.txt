@@ -2,10 +2,10 @@
 	about_Get-ModulePaths
 	
 SHORT DESCRIPTION
-	Explains how to use the Get-ModulePaths powershell module
+	Display's the current PowerShell sessions module paths
 	
 LONG DESCRIPTION
-	<Insert Content here>
+	This function will exectute and dump out all of the PowerShell module paths with the full path for CURRENTUSER, ALLUSERS, System, OTHER.
 
 KEYWORDS
 	Get-ModulePaths
