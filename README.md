@@ -1,8 +1,6 @@
 ﻿# Description
 
-Insert a useful description for the Get-ModulePaths project here.
-
-Remember, it's the first thing a visitor will see.
+This is the Get-ModulePaths sample project. This is a full scafoling project created using Invoke-PSMDTemplate from the PSModuleDevelopment module
 
 # Project Setup Instructions
 ## Working with the layout
