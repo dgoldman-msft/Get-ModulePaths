@@ -5,13 +5,13 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\..\Get-ModulePaths\bin</OutputPath>
-    <DocumentationFile>..\..\..\Get-ModulePaths\bin\Get-ModulePaths.xml</DocumentationFile>
+    <OutputPath>..\..\..\GetModulePath\bin</OutputPath>
+    <DocumentationFile>..\..\..\GetModulePath\bin\GetModulePath.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Release)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\..\Get-ModulePaths\bin</OutputPath>
-    <DocumentationFile>..\..\..\Get-ModulePaths\bin\Get-ModulePaths.xml</DocumentationFile>
+    <OutputPath>..\..\..\GetModulePath\bin</OutputPath>
+    <DocumentationFile>..\..\..\GetModulePath\bin\GetModulePath.xml</DocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup>

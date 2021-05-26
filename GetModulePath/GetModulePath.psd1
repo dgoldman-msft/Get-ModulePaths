@@ -1,6 +1,6 @@
 ﻿@{
 	# Script module or binary module file associated with this manifest
-	RootModule = 'Get-ModulePaths.psm1'
+	RootModule = 'GetModulePath.psm1'
 	
 	# Version number of this module.
 	ModuleVersion = '1.0.0'
@@ -9,7 +9,7 @@
 	GUID = '93c0c7a3-8cd2-4e2d-863a-ed3847efbfbc'
 	
 	# Author of this module
-	Author = 'sifu1'
+	Author = 'Dave Goldman'
 	
 	# Company or vendor of this module
 	CompanyName = '.'
@@ -18,7 +18,7 @@
 	Copyright = 'Copyright (c) 2021 Dave Goldman'
 	
 	# Description of the functionality provided by this module
-	Description = 'Get-ModulePaths Project'
+	Description = 'GetModulePath Project'
 	
 	# Minimum version of the Windows PowerShell engine required by this module
 	PowerShellVersion = '5.0'
@@ -30,16 +30,16 @@
 	)
 	
 	# Assemblies that must be loaded prior to importing this module
-	# RequiredAssemblies = @('bin\Get-ModulePaths.dll')
+	# RequiredAssemblies = @('bin\GetModulePath.dll')
 	
 	# Type files (.ps1xml) to be loaded when importing this module
-	# TypesToProcess = @('xml\Get-ModulePaths.Types.ps1xml')
+	# TypesToProcess = @('xml\GetModulePath.Types.ps1xml')
 	
 	# Format files (.ps1xml) to be loaded when importing this module
-	# FormatsToProcess = @('xml\Get-ModulePaths.Format.ps1xml')
+	# FormatsToProcess = @('xml\GetModulePath.Format.ps1xml')
 	
 	# Functions to export from this module
-	FunctionsToExport = 'Get-ModulePaths'
+	FunctionsToExport = 'Get-ModulePath'
 	
 	# Cmdlets to export from this module
 	CmdletsToExport = ''
@@ -66,10 +66,10 @@
 			Tags = @('Utility')
 			
 			# A URL to the license for this module.
-			LicenseUri = 'https://github.com/dgoldman-msft/Get-ModulePaths/blob/main/LICENSE'
+			LicenseUri = 'https://github.com/dgoldman-msft/GetModulePath/blob/main/LICENSE'
 			
 			# A URL to the main website for this project.
-			ProjectUri = 'https://github.com/dgoldman-msft/Get-ModulePaths'
+			ProjectUri = 'https://github.com/dgoldman-msft/GetModulePath'
 			
 			# A URL to an icon representing this module.
 			# IconUri = ''

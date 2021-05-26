@@ -16,13 +16,13 @@ Function Get-ModulePath {
 			PS C:\> Gmp
 
 		.EXAMPLE
-			PS C:\> Get-ModulePath
+			PS C:\> GetModulePath
 
 		.EXAMPLE
-			PS C:\> Get-ModulePath -ShowProfiles
+			PS C:\> GetModulePath -ShowProfiles
 
 		.EXAMPLE
-			PS C:\> Get-ModulePath -OpenProfilePaths
+			PS C:\> GetModulePath -OpenProfilePaths
 
 		.NOTES
 			NOTE: You can not pull up the help information until the object has been imported
@@ -39,7 +39,7 @@ Function Get-ModulePath {
 	)
 	
 	begin{
-		Write-PSFMessage -String 'Get-ModulePath.Message1'
+		Write-PSFMessage -String 'GetModulePath.Message1'
 		$modpaths = New-Object -TypeName System.Collections.ArrayList
 		$modpaths = $env:PSModulePath -split ';'
 	}

@@ -1,4 +1,4 @@
-﻿New-PSFLicense -Product 'Get-ModulePaths' -Manufacturer 'sifu1' -ProductVersion $script:ModuleVersion -ProductType Module -Name MIT -Version "1.0.0.0" -Date (Get-Date "2021-02-05") -Text @"
+﻿New-PSFLicense -Product 'GetModulePath' -Manufacturer 'sifu1' -ProductVersion $script:ModuleVersion -ProductType Module -Name MIT -Version "1.0.0.0" -Date (Get-Date "2021-02-05") -Text @"
 Copyright (c) 2021 sifu1
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
