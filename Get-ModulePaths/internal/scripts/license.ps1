@@ -1,5 +1,4 @@
-﻿MIT License
-
+﻿New-PSFLicense -Product 'Get-ModulePaths' -Manufacturer 'sifu1' -ProductVersion $script:ModuleVersion -ProductType Module -Name MIT -Version "1.0.0.0" -Date (Get-Date "2021-02-05") -Text @"
 Copyright (c) 2021 sifu1
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,3 +18,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+"@
