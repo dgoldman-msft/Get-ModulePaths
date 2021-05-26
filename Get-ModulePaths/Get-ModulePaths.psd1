@@ -12,10 +12,10 @@
 	Author = 'sifu1'
 	
 	# Company or vendor of this module
-	CompanyName = 'MyCompany'
+	CompanyName = '.'
 	
 	# Copyright statement for this module
-	Copyright = 'Copyright (c) 2021 sifu1'
+	Copyright = 'Copyright (c) 2021 Dave Goldman'
 	
 	# Description of the functionality provided by this module
 	Description = 'Get-ModulePaths Project'
@@ -39,7 +39,7 @@
 	# FormatsToProcess = @('xml\Get-ModulePaths.Format.ps1xml')
 	
 	# Functions to export from this module
-	FunctionsToExport = ''
+	FunctionsToExport = 'Get-ModulePaths'
 	
 	# Cmdlets to export from this module
 	CmdletsToExport = ''
@@ -63,13 +63,13 @@
 		PSData = @{
 			
 			# Tags applied to this module. These help with module discovery in online galleries.
-			# Tags = @()
+			Tags = @('Utility')
 			
 			# A URL to the license for this module.
-			# LicenseUri = ''
+			LicenseUri = 'https://github.com/dgoldman-msft/Get-ModulePaths/blob/main/LICENSE'
 			
 			# A URL to the main website for this project.
-			# ProjectUri = ''
+			ProjectUri = 'https://github.com/dgoldman-msft/Get-ModulePaths'
 			
 			# A URL to an icon representing this module.
 			# IconUri = ''

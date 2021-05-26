@@ -1,4 +1,4 @@
-Function Get-ModulePaths {
+Function Get-ModulePath {
 	<#
 		.SYNOPSIS
 			Display module paths
@@ -6,24 +6,62 @@ Function Get-ModulePaths {
 		.DESCRIPTION
 			This function dumps out module paths
 
+		.PARAMETER ShowProfiles
+			This will display all of the interactive host's PowerShell profiles on the sytem
+			
+		.PARAMETER OpenProfilePaths
+			This will open all profile paths in Windows Explorer
+
 		.EXAMPLE
 			PS C:\> Gmp
 
 		.EXAMPLE
 			PS C:\> Get-ModulePath
 
+		.EXAMPLE
+			PS C:\> Get-ModulePath -ShowProfiles
+
+		.EXAMPLE
+			PS C:\> Get-ModulePath -OpenProfilePaths
+
 		.NOTES
-			None
+			NOTE: You can not pull up the help information until the object has been imported
 	#>
 
-	[Alias('gmp')]
+	[Alias('getmp')]
 	[CmdletBinding(DefaultParameterSetName = "Default")]
-	param()
-
-	process {
-		"-" * 20 + "Module Paths" + "-" * 20
+	param(
+		[switch]
+		$ShowProfiles,
+		
+		[switch]
+		$OpenProfilePaths
+	)
+	
+	begin{
+		Write-PSFMessage -String 'Get-ModulePath.Message1'
 		$modpaths = New-Object -TypeName System.Collections.ArrayList
 		$modpaths = $env:PSModulePath -split ';'
+	}
+
+	process {
+		if($ShowProfiles){
+			$profile | Select-Object *Host* | Format-List
+			return
+		}
+		
+		if($OpenProfilePaths){
+			$counter = 0
+			foreach($path in $modpaths) { 
+			Write-PSFMessage -Level Host -Message "[<c='Green'>{0}</c>]: <c='Yellow'>{1}</c>" -StringValues $counter, $path
+			$counter++ } 
+	
+            $answer = Read-Host "Which module path do you want to open?"
+            Invoke-Item $modpaths[$answer] -ErrorAction SilentlyContinue
+			return
+		}
+
+		"_" * 52
 		foreach ($path in $modpaths) {
 		if ($path.contains("$HOME")){ "CURRENTUSER Scope: $($path)"; continue }
 		if ($path.contains('\Program Files\')){ "ALLUSERS Scope: $($path)"; continue }
