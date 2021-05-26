@@ -1,9 +1,9 @@
 ﻿<#
 	.SYNOPSIS
-		Installs the Get-ModulePaths Module from github
+		Installs the GetModulePath Module from github
 		
 	.DESCRIPTION
-		This script installs the Get-ModulePaths Module from github.
+		This script installs the GetModulePath Module from github.
 		
 		It does so by ...
 		- downloading the specified branch as zip to $env:TEMP
@@ -42,13 +42,13 @@ Param (
 
 #region Configuration for cloning script
 # Name of the module that is being cloned
-$ModuleName = "Get-ModulePaths"
+$ModuleName = "GetModulePath"
 
 # Base path to the github repository
-$BaseUrl = "https://github.com/<dgoldman-msft>/Get-ModulePaths"
+$BaseUrl = "https://github.com/<dgoldman-msft>/GetModulePath"
 
 # If the module is in a subfolder of the cloned repository, specify relative path here. Empty string to skip.
-$SubFolder = "Get-ModulePaths"
+$SubFolder = "GetModulePath"
 #endregion Configuration for cloning script
 
 #region Parameter Calculation

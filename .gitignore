@@ -5,15 +5,15 @@
 *TempPoint*
 
 # Ignore staging info from Visual Studio
-library/Get-ModulePaths/.vs/*
-library/Get-ModulePaths/Get-ModulePaths/bin/*
-library/Get-ModulePaths/Get-ModulePaths/obj/*
+library/GetModulePath/.vs/*
+library/GetModulePath/GetModulePath/bin/*
+library/GetModulePath/GetModulePath/obj/*
 
 # ignore PowerShell Studio MetaData
-Get-ModulePaths/Get-ModulePaths.psproj
-Get-ModulePaths/Get-ModulePaths.psproj.bak
-Get-ModulePaths/Get-ModulePaths.psprojs
-Get-ModulePaths/Get-ModulePaths.psproj
+GetModulePath/GetModulePath.psproj
+GetModulePath/GetModulePath.psproj.bak
+GetModulePath/GetModulePath.psprojs
+GetModulePath/GetModulePath.psproj
 
 # ignore the TestResults
 TestResults/*

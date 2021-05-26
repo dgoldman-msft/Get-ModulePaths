@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Get-ModulePaths
+namespace GetModulePath
 {
     public class Class1
     {

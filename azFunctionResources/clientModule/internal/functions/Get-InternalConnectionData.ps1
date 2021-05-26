@@ -31,13 +31,13 @@
 	
 	process
 	{
-		try { $uri = '{0}{1}' -f (Get-PSFConfigValue -FullName 'Get-ModulePaths.Client.Uri' -NotNull), $FunctionName }
+		try { $uri = '{0}{1}' -f (Get-PSFConfigValue -FullName 'GetModulePath.Client.Uri' -NotNull), $FunctionName }
 		catch { $PSCmdlet.ThrowTerminatingError($_) }
 		$header = @{ }
 		
 		#region Authentication
-		$unprotectedToken = Get-PSFConfigValue -FullName 'Get-ModulePaths.Client.UnprotectedToken'
-		$protectedToken = Get-PSFConfigValue -FullName 'Get-ModulePaths.Client.ProtectedToken'
+		$unprotectedToken = Get-PSFConfigValue -FullName 'GetModulePath.Client.UnprotectedToken'
+		$protectedToken = Get-PSFConfigValue -FullName 'GetModulePath.Client.ProtectedToken'
 		
 		$authenticationDone = $false
 		if ($protectedToken -and -not $authenticationDone)

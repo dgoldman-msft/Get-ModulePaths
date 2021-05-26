@@ -1,29 +1,29 @@
-﻿function Connect-Get-ModulePaths
+﻿function Connect-GetModulePath
 {
 <#
 	.SYNOPSIS
-		Configures the connection to the Get-ModulePaths Azure Function.
+		Configures the connection to the GetModulePath Azure Function.
 	
 	.DESCRIPTION
-		Configures the connection to the Get-ModulePaths Azure Function.
+		Configures the connection to the GetModulePath Azure Function.
 	
 	.PARAMETER Uri
-		Url to connect to the Get-ModulePaths Azure function.
+		Url to connect to the GetModulePath Azure function.
 	
 	.PARAMETER UnprotectedToken
-		The unencrypted access token to the Get-ModulePaths Azure function. ONLY use this from secure locations or non-sensitive functions!
+		The unencrypted access token to the GetModulePath Azure function. ONLY use this from secure locations or non-sensitive functions!
 	
 	.PARAMETER ProtectedToken
-		An encrypted access token to the Get-ModulePaths Azure function. Use this to persist an access token in a way only the current user on the current system can access.
+		An encrypted access token to the GetModulePath Azure function. Use this to persist an access token in a way only the current user on the current system can access.
 	
 	.PARAMETER Register
 		Using this command, the module will remember the connection settings persistently across PowerShell sessions.
 		CAUTION: When using unencrypted token data (such as specified through the -UnprotectedToken parameter), the authenticating token will be stored in clear-text!
 	
 	.EXAMPLE
-		PS C:\> Connect-Get-ModulePaths -Uri 'https://demofunctionapp.azurewebsites.net/api/'
+		PS C:\> Connect-GetModulePath -Uri 'https://demofunctionapp.azurewebsites.net/api/'
 	
-		Establishes a connection to Get-ModulePaths
+		Establishes a connection to GetModulePath
 #>
 	[CmdletBinding()]
 	param (
@@ -44,18 +44,18 @@
 	{
 		if (Test-PSFParameterBinding -ParameterName UnprotectedToken)
 		{
-			Set-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.UnprotectedToken' -Value $UnprotectedToken
-			if ($Register) { Register-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.UnprotectedToken' }
+			Set-PSFConfig -Module 'GetModulePath' -Name 'Client.UnprotectedToken' -Value $UnprotectedToken
+			if ($Register) { Register-PSFConfig -Module 'GetModulePath' -Name 'Client.UnprotectedToken' }
 		}
 		if (Test-PSFParameterBinding -ParameterName Uri)
 		{
-			Set-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.Uri' -Value $Uri
-			if ($Register) { Register-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.Uri' }
+			Set-PSFConfig -Module 'GetModulePath' -Name 'Client.Uri' -Value $Uri
+			if ($Register) { Register-PSFConfig -Module 'GetModulePath' -Name 'Client.Uri' }
 		}
 		if (Test-PSFParameterBinding -ParameterName ProtectedToken)
 		{
-			Set-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.ProtectedToken' -Value $ProtectedToken
-			if ($Register) { Register-PSFConfig -Module 'Get-ModulePaths' -Name 'Client.ProtectedToken' }
+			Set-PSFConfig -Module 'GetModulePath' -Name 'Client.ProtectedToken' -Value $ProtectedToken
+			if ($Register) { Register-PSFConfig -Module 'GetModulePath' -Name 'Client.ProtectedToken' }
 		}
 		
 	}
